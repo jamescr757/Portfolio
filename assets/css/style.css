@@ -1,0 +1,382 @@
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero, #project-section, #about-me-section {
+    background-image: url("../images/hero-space-1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: white;
+}
+
+.lead {
+    margin-top: 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+}
+
+.name-h1 {
+    text-shadow: 2px 2px black;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#cover-card .jumbotron{
+    padding: 2rem 2rem;
+}
+
+#contact-card .jumbotron {
+    padding: 2rem 1rem;
+    opacity: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#contact-card a, #contact-card button, #contact-card p {
+    cursor: default;
+}
+
+.btn {
+    border: white solid 2px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.jumbotron a[role="button"] {
+    border-radius: 0.75rem;
+    background-color: black;
+    color: white;
+}
+
+.jumbotron a[role="button"]:hover {
+    background-color: white;
+    color: black;
+}
+
+.jumbotron button {
+    background-color: black;
+    color: white;
+}
+
+.jumbotron button:hover {
+    background-color: white;
+    color: black;
+}
+
+.dl-resume-btn-top, #contact-btn {
+    border-radius: 0.75rem;
+}
+
+.flex-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.section-container {
+    height: 100vh;
+    margin: 0;
+}
+
+#project-section {
+    padding: 3% 0;
+    position: relative;
+    min-height: 800px;
+    margin: 3px 0;
+}
+
+.section-title {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+}
+
+#project-h2, #about-me-h2 {
+    margin-bottom: 2%;
+    text-shadow: black 2px 2px;
+}
+
+.project-container {
+    max-width: 700px;
+}
+
+.nav-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.nav-container a {
+    margin: 1.5rem 1.5rem;
+    color: whitesmoke;
+}
+
+.nav-container a:hover {
+    color: white;
+    transform: scale(1.25);
+}
+
+.about-me-container {
+    max-width: 700px;
+}
+
+#about-me-section {
+    padding: 2% 0;
+    min-height: 920px;
+}
+
+.flip-card {
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.back-content {
+    text-align: center;
+}
+
+.skills-ul {
+    margin: 0.75rem;
+    text-align: center;
+}
+
+.flip-card .front, .flip-card .back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 1000ms linear;
+    position: absolute;
+}
+
+.flip-card .back {
+    background-color:  rgb(6, 6, 74);
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.flip-card .front {
+    background-color: rgba(208, 199, 199, 0.1);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.flip-card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.flip-card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.flip-card.project {
+    height: 250px;
+    flex-basis: 250px;
+    flex-shrink: 0;
+    margin: 1rem 2rem;
+}
+
+#picture {
+    height: 250px;
+    width: auto;
+}
+
+#pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#picture {
+    box-shadow: 10px 10px 10px #000;
+}
+
+.about-me {
+    height: 310px;
+    flex-basis: 260px;
+    flex-shrink: 0;
+    margin: 1rem;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.pointer {
+    /* transform: scale(1.075); */
+    box-shadow: 10px 10px 10px #000;
+}
+
+#picture:hover {
+    transform: scale(1.075);
+}
+
+.about-me .front, .about-me .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.about-me .front {
+    background-color: rgba(208, 199, 199, 0.1);
+}
+
+.about-me .back {
+    background-color: black;
+    background-color:  rgb(6, 6, 74);
+    display: none;
+}
+
+.contact-back {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-card.project h3 {
+    margin: 1rem 0.5rem;
+    text-decoration: underline;
+    text-shadow: black 2px 2px;
+}
+
+.front ul {
+    text-shadow: black 2px 2px;
+}
+
+.about-me h3 {
+    margin: 50% 0.5rem;
+    font-size: 2rem;
+    text-shadow: black 2px 2px;
+}
+
+.about-me .back {
+    z-index: 2;
+}
+
+.card-back-p {
+    margin: 1rem 0.5rem;
+}
+
+.flip-card button, .flip-card a[role="button"], .about-me button {
+    display: block;
+    border-radius: 0.75rem;
+    margin: 7.5% auto;
+}
+
+.back-content a[role="button"] {
+    border-radius: 0.75rem;
+}
+
+.app-btn {
+    width: 6.5rem;
+}
+
+.code-btn {
+    width: 8rem;
+}
+
+#contact-info a, #contact-info button {
+    margin: 12.5% auto;
+}
+
+.linkedin-btn {
+    width: 5.25rem;
+}
+
+.github-btn {
+    width: 4.75rem;
+}
+
+.view-resume-btn {
+    width: 8rem;
+}
+
+.dl-resume-btn {
+    width: 10.5rem;
+    border-radius: 0.75rem;
+}
+
+/* .ul-left {
+    list-style: square;
+}
+
+.skills-list-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.list-top {
+    border-bottom: white 2px solid;
+}
+
+.skills-list-col {
+    margin: 0.75rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.skills-subtitle {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+} */
+
+#background-p {
+    margin: 1rem;
+    line-height: 1.75;
+}
+
+/* .modal-header {
+    border-bottom-color: transparent;
+} */
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(14, 14, 75);
+    background-color:  rgb(6, 6, 74);
+    color: white;
+}
+
+.close {
+    color: white;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.close:hover {
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 560px) {
+    #project-section {
+        min-height: 1875px;
+    }
+
+    #about-me-section {
+        min-height: 1550px;
+    }
+}
