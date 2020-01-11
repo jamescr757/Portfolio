@@ -41,7 +41,7 @@ $(document).ready(() => {
       } else {
         // append content to modal header and body 
         $(".modal-body").html(`
-            <video src="./assets/images/${imageAddress}-demo.mov" 
+            <video src="./assets/images/${imageAddress}-demo.${imageAddress === "nhl-scores" ? "mp4" : "mov"}" 
               height="475px" 
               width="850px" 
               controls>
