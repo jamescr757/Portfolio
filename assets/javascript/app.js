@@ -28,30 +28,17 @@ $(document).ready(() => {
       const appName = event.target.dataset.name;
       const imageAddress = appName.toLowerCase().replace(/\s/g, "-");
 
-      if (event.target.dataset.name === "Bamazon") {
+      // append content to modal header and body 
+      $(".modal-body").html(`
+          <video src="./assets/images/${imageAddress}-demo.${imageAddress === "nhl-scores" || "recipe-box" ? "mp4" : "mov"}" 
+            height="475px" 
+            width="850px" 
+            controls>
+            Video not supported
+          </video>
+      `);
 
-        $(".modal-body").html(`
-            <p>
-              Please click the "Source Code" button and look at the README to view the app's demo 
-            </p>
-        `);
-
-        $("#bamazonModalTitle").text(`${appName}`);
-
-      } else {
-        // append content to modal header and body 
-        $(".modal-body").html(`
-            <video src="./assets/images/${imageAddress}-demo.${imageAddress === "nhl-scores" ? "mp4" : "mov"}" 
-              height="475px" 
-              width="850px" 
-              controls>
-              Video not supported
-            </video>
-        `);
-
-        $("#modalTitle").text(`${appName}`);
-
-      }
+      $("#modalTitle").text(`${appName}`);
 
       
     }
