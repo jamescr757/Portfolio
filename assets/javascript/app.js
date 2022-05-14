@@ -27,7 +27,6 @@ $(document).ready(() => {
 
       const appName = event.target.dataset.name;
       const imageAddress = appName.toLowerCase().replace(/\s/g, "-");
-      console.log(imageAddress);
 
       // append content to modal header and body 
       $(".modal-body").html(`
