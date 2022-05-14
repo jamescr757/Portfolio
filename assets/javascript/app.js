@@ -30,7 +30,7 @@ $(document).ready(() => {
 
       // append content to modal header and body 
       $(".modal-body").html(`
-          <video src="./assets/images/${imageAddress}-demo.${imageAddress === "nhl-scores" || "recipe-box" ? "mp4" : "mov"}" 
+          <video src="./assets/images/${imageAddress}-demo.${imageAddress === "ticket-pass" ? "mov" : "mp4"}" 
             height="475px" 
             width="850px" 
             controls>
